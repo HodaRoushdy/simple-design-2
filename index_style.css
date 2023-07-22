@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.content{
+    background-color: gray;
+
+}
+.forScale{
+    overflow: hidden;
+}
+.item{
+    width :25%;
+    height: 300px;
+    position: relative;
+    border: 4px solid white;
+    overflow: hidden;
+    float: left;
+}
+.item img{
+    width : 100%;
+    transition: transform 1s 1s;
+}
+.caption p{
+    padding: 10px 0px;
+}
+.navbar{
+    background-color: #2a3f55;
+    padding: 10 px 0px;
+    position: relative;
+    left: 105%;
+    transition: left 1s 3s;
+}
+.caption{
+position: absolute;
+background-color: rgba(42,63, 85, 0.7);
+top: 0;
+left: 0;
+height: 100%;
+text-align: center;
+color: white;
+opacity: 0;
+transition: opacity 1s, transform 1s;
+overflow: hidden;
+}
+.item:hover .caption{
+opacity: 1;
+transform: rotate(360deg);
+}
+.item:hover img{
+    transform: scale(1.1,1.1 );
+}
+.item:hover .navbar{
+    left : 0;
+}
+.caption p{
+    position: relative;
+    left: 100%;
+}
+.item:hover p{
+    left : 0;
+    transition: left 1s 3.5s;
+}
